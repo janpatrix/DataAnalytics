@@ -62,3 +62,11 @@ print("Unique Accounts Submission: " + str(len(unique_submission_acc)))
 #Problems in the data:
 #1. More students in enrollment than in engagement -> should be the same
 #2. account_key != acct
+
+#Identify which users are present in Enrollments but not in Engagement
+
+for enrollment in enrollments:
+    student = enrollment['account_key']
+    if (student not in unique_engaged_acc):
+        print(enrollment)
+        
